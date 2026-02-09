@@ -969,4 +969,4 @@ int main(int argc, char **argv)
 <img width="1553" height="169" alt="image" src="https://github.com/user-attachments/assets/8b50ed89-dc25-4f9e-b003-0ccec193691c" />
 
 ## RESULT:
-Thus, Implementation of sum arrays on host and device is done in nvcc cuda using random number.
+The experiment demonstrates that GPU performance is strongly influenced by the number of threads per block. Configurations using a higher number of threads per block (around 1023–1024) achieve better GPU utilization and lower execution time. When fewer or intermediate thread counts are used, kernel execution time increases due to reduced occupancy and higher scheduling overhead. Therefore, for the Tesla T4 GPU used in this experiment, a thread configuration close to 1024 threads per block provides the best performance.
